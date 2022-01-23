@@ -1,0 +1,37 @@
+
+name: Assemble APK
+
+on:
+  workflow_dispatch:
+    inputs:
+      buildtype:
+        description: 'Buildtype (debug, release)'
+        default: 'debug'
+        required: true
+
+jobs:
+  Assembly:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Prepare Debug Environment
+      if: ${{ github.event.inputs.buildtype == 'debug' }}
+      run: | 
+        echo "BUILD_TYPE_MC=Debug" >>$GITHUB_ENV
+        echo "BUILD_TYPE_LC=debug" >>$GITHUB_ENV
+    - name: Prepare Release Environment
+      if: ${{ github.event.inputs.buildtype == 'release' }}
+      run: | 
+        echo "BUILD_TYPE_MC=Release" >>$GITHUB_ENV
+        echo "BUILD_TYPE_LC=release" >>$GITHUB_ENV
+    - name: Checkout
+      uses: actions/checkout@v2
+    - uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    - name: Run Gradle
+      run: gradle --warning-mode=all assemble${{ env.BUILD_TYPE_MC }}
+    - uses: actions/upload-artifact@v2
+      with:
+        name: ${{ env.BUILD_TYPE_MC }}.apk
+        path: build/outputs/apk/${{ env.BUILD_TYPE_LC }}/helm-${{ env.BUILD_TYPE_LC }}.apk
