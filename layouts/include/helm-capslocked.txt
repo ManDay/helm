@@ -1,0 +1,4 @@
+:include/helm-shift-variant.txt 5
+:include/helm-shift-invariant.txt
+
+0 layout[helm,0,capslocked]
