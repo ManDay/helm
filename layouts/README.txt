@@ -9,7 +9,8 @@
 <cg> := C<number><turns>C?
 <sg> := <number><turns>(C<number><turns>)*C?
 
-Center-Gestures cg start at center and are automatically broken at return to center. They conventionally end on C. Sector-Gestures sg are not broken at center.
+Center-Gestures cg start at center and are automatically broken at return to center. If they do not end on C, they will also match when releasing in the sector without returning to the center.
+Sector-Gestures sg are not broken at center.
 Gestures are implicity non-repeatable. To force repeatability suffix with "!".
 
 Include with ":filename offset". This includes the given layout at the given point. The offset shifts the absolute value of the primary turn into the direction opposite of its sign, wrapping around at maximum of the primary turn at that sector (syntactic sugar for applying shift to a layout).
