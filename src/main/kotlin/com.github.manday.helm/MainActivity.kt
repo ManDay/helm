@@ -2,6 +2,7 @@ package com.github.manday.helm;
 
 import android.os.Bundle;
 import android.app.Activity;
+import	android.content.Intent;
 import android.widget.TextView;
 
 class MainActivity : Activity() {
