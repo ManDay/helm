@@ -7,7 +7,7 @@ Direction of turn is ill-defined for <3 sectors.
 We have to anticipate that an adjacent sector might me spuriously skipped without release (although unlikely in practice).
 We can not infer the user-intended direction of turn (movement of finger) if sectors are skipped or <3 sectors are present.
 
-The problem of infering (or being unable to) the direction of turn is handled above the Layout class. The Layout class and its sequences assume a valid direction of turn has been inferred.
+The problem of infering (or being unable to) the direction of turn is handled above the Layout class. The Layout class and its sublayouts assume a valid direction of turn has been inferred.
 
 Public:
 
@@ -20,26 +20,26 @@ on_emit_char: fun
 on_emit_special: fun
 on_mismatch: fun
 
-(sequence:)
+(sublayout:)
  terminal: action?
  release()
 
-sector-sequence: sequence
+sector-sublayout: sublayout
  turn_sector(plus)
  enter_center()
 
-sector_gestures?[]: sector-sector-sequence: sector-sequence
- plus: sector-sector-sequence?
- minus: sector-sector-sequence?
- center: sector-center-sequence: sequence
+sector_gestures?[]: sector-sector-sublayout: sector-sublayout
+ plus: sector-sector-sublayout?
+ minus: sector-sector-sublayout?
+ center: sector-center-sublayout: sublayout
   enter_sector(number)
-  sectors[]?: sector-sector-sequence
+  sectors[]?: sector-sector-sublayout
 
-center_gesture: center-sequence: sequence
+center_gesture: center-sublayout: sublayout
  enter_sector(number)
- sectors?[]: center-sector-sequence: sector-sequence
-  plus: center-sector-sequence?
-  minus: center-sector-sequence?
+ sectors?[]: center-sector-sublayout: sector-sublayout
+  plus: center-sector-sublayout?
+  minus: center-sector-sublayout?
   center: action?
 
 No premature optimization (tm): Could use steps -> count,steps to skip over unbound: Rare in practice, wasted effort
