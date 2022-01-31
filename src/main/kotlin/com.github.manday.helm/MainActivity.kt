@@ -5,9 +5,9 @@ import android.app.Activity;
 import	android.content.Intent;
 import android.widget.TextView;
 
+const val OPEN_DOCUMENT_TREE: Int = 1;
+
 class MainActivity : Activity() {
- const val OPEN_DOCUMENT_TREE: Int = 1;
- 
  override fun onActivityResult( requestCode:Int, resultCode:Int, resultData:Intent? ) {
   if (requestCode==OPEN_DOCUMENT_TREE && resultCode==Activity.RESULT_OK ) {
   }
