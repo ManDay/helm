@@ -5,6 +5,15 @@ import android.app.Activity;
 import android.widget.TextView;
 
 class MainActivity : Activity() {
+ enum class RequestCodes {
+  OPEN_DOCUMENT_TREE
+ }
+ 
+ override fun onActivityResult( requestCode:Int, resultCode:Int, resultData:Intent? ) {
+  if (requestCode==RequestCodes.OPEN_DOCUMENT_TREE && resultCode==Activity.RESULT_OK ) {
+  }
+ }
+
  override fun onCreate(savedInstanceState:Bundle?) {
   super.onCreate(savedInstanceState);
   val output = TextView(this);
