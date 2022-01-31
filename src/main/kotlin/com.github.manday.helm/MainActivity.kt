@@ -9,5 +9,6 @@ class MainActivity : Activity() {
   super.onCreate(savedInstanceState);
   val output = TextView(this);
   this.setContentView(output);
+  output.setText("This is a te[xs]t");
  }
 }
