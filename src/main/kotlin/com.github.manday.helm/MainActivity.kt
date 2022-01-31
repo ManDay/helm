@@ -5,12 +5,10 @@ import android.app.Activity;
 import android.widget.TextView;
 
 class MainActivity : Activity() {
- enum class RequestCodes {
-  OPEN_DOCUMENT_TREE
- }
+ val OPEN_DOCUMENT_TREE: Int = 1;
  
  override fun onActivityResult( requestCode:Int, resultCode:Int, resultData:Intent? ) {
-  if (requestCode==RequestCodes.OPEN_DOCUMENT_TREE && resultCode==Activity.RESULT_OK ) {
+  if (requestCode==OPEN_DOCUMENT_TREE && resultCode==Activity.RESULT_OK ) {
   }
  }
 
