@@ -3,6 +3,7 @@
  <application android:icon="@mipmap/ic_launcher">
   <activity
    android:name=".Preferences"
+   android:exported="false"
    android:label="Helm Preferences">
    <intent-filter>
     <action android:name="android.intent.action.MAIN" />
