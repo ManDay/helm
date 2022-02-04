@@ -3,7 +3,7 @@
 
  <PreferenceCategory
   app:key="cat_layout"
-  app:title="Test">
+  app:title="@string/cat_layout">
   <SwitchPreferenceCompat
       app:key="autoshifting"
       app:summary="@string/autoshift_sum"
