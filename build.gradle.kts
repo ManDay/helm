@@ -22,4 +22,5 @@ android {
 }
 
 dependencies {
+    classpath("androidx.appcompat:appcompat:1.4.1")
 }
