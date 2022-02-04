@@ -25,6 +25,6 @@ android {
 }
 
 dependencies {
-    implementation("androidx.preference:preference:1.2.0")
-    implementation("androidx.fragment:fragment:1.4.1")
+    implementation("androidx.preference:preference-ktx:1.2.0")
+    implementation("androidx.fragment:fragment-ktx:1.4.1")
 }
