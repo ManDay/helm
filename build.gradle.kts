@@ -11,7 +11,6 @@ repositories {
 }
 
 android {
-    useAndroidX = true
     compileSdkVersion(30)
     defaultConfig {
         applicationId = "com.github.manday.helm"
