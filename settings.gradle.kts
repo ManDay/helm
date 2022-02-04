@@ -5,6 +5,8 @@ pluginManagement {
   }
 }
 buildscript {
+  android.useAndroidX = true
+  
   repositories {
     google()
     mavenCentral()
