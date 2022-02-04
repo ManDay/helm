@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="cat_layout">
+  Layouts
+ </string>
+ <string name="autoshift_sum">
+  Switch to shifted sublayout after a period
+ </string>
+ <string name="autoshift">
+  Autoshifting
+ </string>
+ <string name="layout_config_sum">
+  Load and arrange layout definitions
+ </string>
+ <string name="layout_config">
+  Layout configuration
+ </string>
+</resources>
+

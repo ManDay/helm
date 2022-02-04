@@ -1,0 +1,5 @@
+/*
+
+Renders the cross and sectors. Used by HelmView and as a Preview in the Settings Activity
+
+*/
