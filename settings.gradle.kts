@@ -14,4 +14,3 @@ buildscript {
     classpath("com.android.tools.build:gradle:7.0.4")
   }
 }
-android.useAndroidX = true
