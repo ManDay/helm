@@ -26,4 +26,5 @@ android {
 
 dependencies {
     implementation("androidx.preference:preference:1.2.0")
+    implementation("androidx.fragment:fragment:1.4.1")
 }
