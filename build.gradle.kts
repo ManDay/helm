@@ -27,4 +27,5 @@ android {
 dependencies {
     implementation("androidx.preference:preference-ktx:1.2.0")
     implementation("androidx.fragment:fragment-ktx:1.4.1")
+    implementation("com.google.android.material:material:1.5.0")
 }
