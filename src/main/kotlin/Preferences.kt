@@ -6,8 +6,6 @@ import androidx.fragment.app.FragmentActivity;
 class Preferences : FragmentActivity() {
  override fun onCreate( savedInstanceState : Bundle? ) {
   super.onCreate( savedInstanceState );
-  getSupportFragmentManager().beginTransaction().replace( R.id.settings_container,PreferencesFragment() ).commit()
-
-  this.setContentView(output);
+  setContentView( R.layout.preferences_activity )
  }
 }
