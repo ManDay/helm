@@ -1,7 +1,7 @@
 package com.github.manday.helm;
 
 import android.os.Bundle;
-import androidx.fragment.app;
+import androidx.fragment.app.FragmentActivity;
 
 class Preferences : FragmentActivity() {
  override fun onCreate( savedInstanceState : Bundle? ) {
