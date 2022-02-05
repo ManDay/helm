@@ -9,7 +9,7 @@
       app:summary="@string/autoshift_sum"
       app:title="@string/autoshift" />
   <Preference
-      app:fragment="com.github.manday.helm.LayoutConfig"
+      app:fragment="com.github.manday.helm.LayoutConfigFragment"
       app:key="layout_config"
       app:summary="@string/layout_config_sum"
       app:title="@string/layout_config" />
