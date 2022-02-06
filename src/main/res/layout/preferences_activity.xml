@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ViewGroup
+<androidx.fragment.app.FragmentContainerView
  xmlns:android="http://schemas.android.com/apk/res/android"
- android:id="@+id/preferences_view"
+ android:layout_width="match_parent"
  android:layout_height="match_parent"
- android:layout_width="match_parent">
- <com.google.android.material.appbar.MaterialToolbar
-  android:id="@+id/preferences_toolbar"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"/>
- <androidx.fragment.app.FragmentContainerView
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:id="@+id/preferences_activity_fragment"
-  android:name="com.github.manday.helm.PreferencesFragment" />
-</ViewGroup>
+ android:id="@+id/preferences_activity_fragment"
+ android:name="com.github.manday.helm.PreferencesFragment" />
