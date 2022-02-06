@@ -16,7 +16,7 @@
   android:layout_gravity="bottom|right"
   android:layout_margin="16dp"
   android:src="@android:drawable/ic_menu_save"
-  app:layout_anchor="@id/lvToDoList"
+  app:layout_anchor="@id/layout_recycler_view"
   app:layout_anchorGravity="bottom|right|end" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
