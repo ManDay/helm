@@ -1,7 +1,7 @@
 package com.github.manday.helm;
 
 import android.os.Bundle;
-import androidx.appcompat.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 class PreferencesActivity : AppCompatActivity() {
  override fun onCreate( savedInstanceState : Bundle? ) {
