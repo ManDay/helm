@@ -1,11 +1,13 @@
 package com.github.manday.helm;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.activity.ComponentActivity;
 
-class PreferencesActivity : AppCompatActivity() {
+class PreferencesActivity : ComponentActivity() {
  override fun onCreate( savedInstanceState : Bundle? ) {
   super.onCreate( savedInstanceState );
-  setContentView( R.layout.preferences_activity )
+  setContent {
+   Text( "Hello Helm!" )
+  }
  }
 }
