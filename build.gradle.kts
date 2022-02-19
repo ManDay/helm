@@ -22,9 +22,9 @@ android {
     buildFeatures {
         compose = true        
     }
-    /* composeOptions {
-        kotlinCompilerExtensionVersion "1.0.0-alpha16"
-    } */
+    composeOptions {
+        kotlinCompilerExtensionVersion "1.1.0"
+    }
 }
 
 dependencies {
