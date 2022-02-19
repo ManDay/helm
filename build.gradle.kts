@@ -30,5 +30,5 @@ android {
 dependencies {
     implementation("androidx.preference:preference:1.2.0")
     implementation("androidx.activity:activity:1.4.0")
-    implementation("androidx.compose.material:material:1.0.0-alpha16")
+    implementation("androidx.compose.material:material:1.1.0")
 }
