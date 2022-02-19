@@ -28,6 +28,6 @@ android {
 }
 
 dependencies {
-    implementation("androidx.activity:activity:1.4.0")
+    implementation("androidx.activity:activity-compose:1.4.0")
     implementation("androidx.compose.material:material:1.1.0")
 }
