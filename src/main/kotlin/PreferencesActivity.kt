@@ -67,7 +67,7 @@ fun PreferencesComposable( ) {
     content = {
       innerPadding -> LazyColumn(contentPadding = innerPadding) {
         items(count = 100) {
-          Box( Modifier.fillMaxWidth().height(50.dp).background(myColors[it % myColors.size]) )
+          Box( Modifier.fillMaxWidth().height(50.dp).background(myColors.surface) )
         }
       }
     }
