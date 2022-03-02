@@ -19,7 +19,7 @@ import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.Icons.Filled
 
 
 class PreferencesActivity : ComponentActivity() {
@@ -46,7 +46,7 @@ fun PreferencesComposable( ) {
           IconButton(
             onClick = { }
           ) {
-            Icon(Icons.Filled.Menu, contentDescription = "Localized description")
+            Icon(Filled.Menu, contentDescription = "Localized description")
           }
         }
       )
