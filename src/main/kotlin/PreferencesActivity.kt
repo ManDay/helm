@@ -38,7 +38,7 @@ class PreferencesActivity : ComponentActivity() {
 @Composable
 fun PreferencesComposable( ) {
 
-  val colors = MaterialTheme.colors
+  val myColors = MaterialTheme.colors
   val scaffoldState = rememberScaffoldState()
   val scope = rememberCoroutineScope()
 
@@ -67,7 +67,7 @@ fun PreferencesComposable( ) {
     content = {
       innerPadding -> LazyColumn(contentPadding = innerPadding) {
         items(count = 100) {
-          Box( Modifier.fillMaxWidth().height(50.dp).background(colors[it % colors.size]) )
+          Box( Modifier.fillMaxWidth().height(50.dp).background(myColors[it % myColors.size]) )
         }
       }
     }
