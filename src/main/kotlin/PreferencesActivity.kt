@@ -19,6 +19,7 @@ import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.material.icons.Icons
 
 
 class PreferencesActivity : ComponentActivity() {
@@ -43,7 +44,7 @@ fun PreferencesComposable( ) {
         title = { Text("Simple Scaffold Screen") },
         navigationIcon = {
           IconButton(
-            onClick = { scope.launch { scaffoldState.drawerState.open() } }
+            onClick = { }
           ) {
             Icon(Icons.Filled.Menu, contentDescription = "Localized description")
           }
