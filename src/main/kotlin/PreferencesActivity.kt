@@ -17,9 +17,11 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
+import androidx.compose.material.FabPosition
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.material.icons.Icons.Filled
+import androidx.compose.material.icons.Icons
+import androidx.compose.ui.Modifier
 
 
 class PreferencesActivity : ComponentActivity() {
@@ -46,7 +48,7 @@ fun PreferencesComposable( ) {
           IconButton(
             onClick = { }
           ) {
-            Icon(Filled.Menu, contentDescription = "Localized description")
+            Icon( Icons.Filled.Menu, contentDescription = "Localized description")
           }
         }
       )
