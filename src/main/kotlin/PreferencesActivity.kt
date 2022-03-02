@@ -3,16 +3,6 @@ package com.github.manday.helm;
 import android.os.Bundle;
 import androidx.activity.ComponentActivity;
 import androidx.activity.compose.setContent;
-import androidx.compose.material.Text;
-
-class PreferencesActivity : ComponentActivity() {
- override fun onCreate( savedInstanceState : Bundle? ) {
-  super.onCreate( savedInstanceState );
-  setContent {
-   PreferencesComposable( )
-  }
- }
-}
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -28,6 +18,15 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.rememberCoroutineScope
 
+
+class PreferencesActivity : ComponentActivity() {
+ override fun onCreate( savedInstanceState : Bundle? ) {
+  super.onCreate( savedInstanceState );
+  setContent {
+   PreferencesComposable( )
+  }
+ }
+}
 
 @Composable
 fun PreferencesComposable( ) {
