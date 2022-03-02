@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.github.manday.helm">
  <application
-  android:theme="@android:style/Theme.MaterialComponents.DayNight.NoActionBar"
+  android:theme="@android:style/Theme.Material3.DayNight"
   android:icon="@mipmap/ic_launcher">
   <activity
    android:name=".PreferencesActivity"
