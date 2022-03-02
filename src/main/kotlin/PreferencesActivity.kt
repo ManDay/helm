@@ -19,9 +19,11 @@ import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.FabPosition
 import androidx.compose.material.rememberScaffoldState
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.material.icons.Icons
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 
 
 class PreferencesActivity : ComponentActivity() {
@@ -63,7 +65,7 @@ fun PreferencesComposable( ) {
     content = {
       innerPadding -> LazyColumn(contentPadding = innerPadding) {
         items(count = 100) {
-          Box( Modifier.fillMaxWidth().height(50.dp).background(colors[it % colors.size]) )
+          Box( Modifier.fillMaxWidth().height(50.dp).background(MaterialTheme.colors[it % MaterialTheme.colors.size]) )
         }
       }
     }
