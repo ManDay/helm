@@ -28,11 +28,12 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.rememberCoroutineScope
 
-val scaffoldState = rememberScaffoldState()
-val scope = rememberCoroutineScope()
 
 @Composable
 fun PreferencesComposable( ) {
+  val scaffoldState = rememberScaffoldState()
+  val scope = rememberCoroutineScope()
+
   Scaffold(
     scaffoldState = scaffoldState,
     drawerContent = { Text("Drawer content") },
