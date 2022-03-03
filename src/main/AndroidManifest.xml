@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.github.manday.helm">
  <application
   android:icon="@mipmap/ic_launcher"
-  android:theme="@style/Theme.Material3.Light">
+  android:theme="@style/Theme.Material3.Dark.NoActionBar">
   <activity
    android:name=".PreferencesActivity"
    android:exported="true"
