@@ -27,7 +27,7 @@ import androidx.compose.material.rememberScaffoldState
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled;
+import androidx.compose.material.icons.filled.*;
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
@@ -46,13 +46,13 @@ private fun DrawerComposable( ){
   Column( modifier = Modifier.verticalScroll( rememberScrollState( ) ) ){
     Button( null ){
       Row( ){
-        Icon( Icons.Filled.ViewList,"Layouts" )
+        Icon( Icons.Filled.List,"Layouts" )
         Text( "Layouts" )
       }
     }
     Button( null ){
       Row( ){
-        Icon( Icons.Filled.AspectRatio,"Geometry" )
+        Icon( Icons.Filled.Close,"Geometry" )
         Text( "Geometry" )
       }
     }
