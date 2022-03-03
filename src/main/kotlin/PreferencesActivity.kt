@@ -22,7 +22,7 @@ import androidx.compose.material.rememberScaffoldState
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled;
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
@@ -37,18 +37,35 @@ class PreferencesActivity : ComponentActivity() {
 }
 
 @Composable
-fun PreferencesComposable( ) {
+private fun DrawerComposable( ){
+  Column( modifier = Modifier.verticalScroll( rememberScrollState( ) ) ){
+    Button( ){
+      Row( ){
+        Icon( Icons.Filled.ViewList )
+        Text( "Layouts" )
+      }
+    }
+    Button( ){
+      Row( ){
+        Icon( Icons.Filled.AspectRatio )
+        Text( "Geometry" )
+      }
+    }
+  }
+}
 
+@Composable
+private fun PreferencesComposable( ) {
   val myColors = MaterialTheme.colors
   val scaffoldState = rememberScaffoldState()
   val scope = rememberCoroutineScope()
 
   Scaffold(
     scaffoldState = scaffoldState,
-    drawerContent = { Text("Drawer content") },
+    drawerContent = { DrawerComposable( ) },
     topBar = {
       TopAppBar(
-        title = { Text("Simple Scaffold Screen") },
+        title = { Text("Helm") },
         navigationIcon = {
           IconButton(
             onClick = { }
@@ -61,8 +78,8 @@ fun PreferencesComposable( ) {
     floatingActionButtonPosition = FabPosition.End,
     floatingActionButton = {
       ExtendedFloatingActionButton(
-        text = { Text("Inc") },
-        onClick = { /* fab click handler */ }
+        icon = { Icon( Icons.Filled.FolderZip ) },
+        text = { Text( "Load" ) }
       )
     },
     content = {
