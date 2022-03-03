@@ -44,7 +44,7 @@ class PreferencesActivity : ComponentActivity() {
 @Composable
 private fun DrawerComposable( ){
   Column( modifier = Modifier.verticalScroll( rememberScrollState( ) ) ){
-    Button( null ){
+    Button( onClick = null ){
       Row( ){
         Icon( Icons.Filled.List,"Layouts" )
         Text( "Layouts" )
@@ -83,7 +83,7 @@ private fun PreferencesComposable( ) {
     floatingActionButtonPosition = FabPosition.End,
     floatingActionButton = {
       ExtendedFloatingActionButton(
-        icon = { Icon( Icons.Filled.FolderZip,"Zip File" ) },
+        icon = { Icon( Icons.Filled.AddCircle,"Zip File" ) },
         text = { Text( "Load" ) }
       )
     },
