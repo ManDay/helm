@@ -40,7 +40,7 @@ class PreferencesActivity: ComponentActivity() {
   override fun onCreate( savedInstanceState: Bundle? ) {
     super.onCreate( savedInstanceState );
     addContextAvailableListener {
-      object: OnContextAvailableListener {
+      object: addOnContextAvailableListener {
         fun onContextAvailable( context: Context ) {
           setContent {
             PreferencesComposable( context )
