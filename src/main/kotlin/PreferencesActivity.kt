@@ -42,12 +42,14 @@ class PreferencesActivity: ComponentActivity() {
   override fun onCreate( savedInstanceState: Bundle? ) {
     super.onCreate( savedInstanceState );
 
-    withContextAvailable<Unit> {
-      Log.w( "helm","Context is here" )
-      setContent {
-        PreferencesComposable( it.getApplicationContext() as Helm )
+		launch {
+      withContextAvailable<Unit> {
+        Log.w( "helm","Context is here" )
+        setContent {
+          PreferencesComposable( it.getApplicationContext() as Helm )
+        }
       }
-    }
+		}
 
 /*
     addOnContextAvailableListener {
