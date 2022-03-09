@@ -72,7 +72,7 @@ private fun PreferencesComposable( ) {
       TopAppBar(
         title = { Text("Helm") },
         navigationIcon = {
-          IconButton( onClick = { scope.launch { scaffoldState.drawerState.open( ) } ) {
+          IconButton( onClick = { scope.launch { scaffoldState.drawerState.open( ) } } ) {
             Icon( Icons.Filled.Menu,"Menu")
           }
         }
