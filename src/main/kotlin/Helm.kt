@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.compose.runtime.mutableStateListOf
 
 class Helm: Application() {
- var layoutRepository : SnapshotListOf;
+ var layoutRepository : SnapshotListOf<Layout>? = null;
  override fun onCreate( ) {
   super.onCreate( );
   this.layoutRepository = mutableStateListOf<Layout>( );
