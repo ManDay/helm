@@ -2,12 +2,13 @@ package com.github.manday.helm;
 
 import android.app.Application;
 import android.os.Bundle;
+import androidx.compose.runtime.mutableStateListOf
 
 class Helm: Application() {
- val layoutRepository : LayoutRepository;
+ var layoutRepository : SnapshotListOf;
  override fun onCreate( ) {
   super.onCreate( );
-  this.layoutRepository = LayoutRepository( );
+  this.layoutRepository = mutableStateListOf<Layout>( );
  }
 }
 
