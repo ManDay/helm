@@ -1,6 +1,7 @@
 package com.github.manday.helm;
 
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.coroutineScope
 
 import android.os.Bundle;
 import android.util.Log;
@@ -42,7 +43,7 @@ class PreferencesActivity: ComponentActivity() {
   override fun onCreate( savedInstanceState: Bundle? ) {
     super.onCreate( savedInstanceState );
 
-		launch {
+		coroutineScope {
       withContextAvailable<Unit> {
         Log.w( "helm","Context is here" )
         setContent {
