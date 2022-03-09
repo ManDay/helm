@@ -44,7 +44,7 @@ class PreferencesActivity: ComponentActivity() {
     addOnContextAvailableListener {
       object: OnContextAvailableListener {
         override fun onContextAvailable( context: Context ) {
-          Log.w( "Context is here" )
+          Log.w( "helm","Context is here" )
           setContent {
             PreferencesComposable( context.getApplicationContext() as Helm )
           }
