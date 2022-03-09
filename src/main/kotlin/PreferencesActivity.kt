@@ -45,9 +45,6 @@ class PreferencesActivity: ComponentActivity() {
 
   
   override fun onCreate( savedInstanceState: Bundle? ) {
-    super.onCreate( savedInstanceState );
-
-		val scope = CoroutineScope( Dispatchers.Default )
 /*
 		runBlocking {
   		launch {
@@ -63,15 +60,14 @@ class PreferencesActivity: ComponentActivity() {
     addOnContextAvailableListener {
       object: OnContextAvailableListener {
         override fun onContextAvailable( context: Context ) {
-          scope.launch {
-            Log.w( "helm","Context is here" )
-            setContent {
-              PreferencesComposable( context.getApplicationContext() as Helm )
-            }
+          Log.w( "helm","Context is here" )
+          setContent {
+            PreferencesComposable( context.getApplicationContext() as Helm )
           }
         }
       }
     }
+    super.onCreate( savedInstanceState );
   }
 }
 
