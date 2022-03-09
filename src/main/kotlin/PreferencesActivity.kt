@@ -3,6 +3,7 @@ package com.github.manday.helm;
 import kotlinx.coroutines.launch
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.activity.ComponentActivity;
 import androidx.activity.compose.setContent;
@@ -43,6 +44,7 @@ class PreferencesActivity: ComponentActivity() {
     addOnContextAvailableListener {
       object: OnContextAvailableListener {
         override fun onContextAvailable( context: Context ) {
+          Log.w( "Context is here" )
           setContent {
             PreferencesComposable( context.getApplicationContext() as Helm )
           }
