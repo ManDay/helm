@@ -43,7 +43,7 @@ class PreferencesActivity: ComponentActivity() {
       object: OnContextAvailableListener {
         override fun onContextAvailable( context: Context ) {
           setContent {
-            PreferencesComposable( context )
+            PreferencesComposable( context.getApplicationContext as Helm )
           }
         }
       }
@@ -70,8 +70,8 @@ private fun DrawerComposable( ){
 }
 
 @Composable
-private fun PreferencesComposable( context: Context ) {
-  val context = context
+private fun PreferencesComposable( helm: Helm ) {
+  val layoutRepository = helm.layoutRepository
   val myColors = MaterialTheme.colors
   val scaffoldState = rememberScaffoldState()
   val scope = rememberCoroutineScope()
