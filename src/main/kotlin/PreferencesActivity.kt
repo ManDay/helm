@@ -41,7 +41,7 @@ class PreferencesActivity: ComponentActivity() {
     super.onCreate( savedInstanceState );
     addOnContextAvailableListener {
       object: OnContextAvailableListener {
-        fun onContextAvailable( context: Context ) {
+        override fun onContextAvailable( context: Context ) {
           setContent {
             PreferencesComposable( context )
           }
