@@ -43,7 +43,7 @@ class PreferencesActivity: ComponentActivity() {
       object: OnContextAvailableListener {
         override fun onContextAvailable( context: Context ) {
           setContent {
-            PreferencesComposable( context.getApplicationContext as Helm )
+            PreferencesComposable( context.getApplicationContext() as Helm )
           }
         }
       }
