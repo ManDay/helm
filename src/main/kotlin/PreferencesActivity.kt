@@ -41,6 +41,14 @@ import androidx.compose.ui.unit.dp
 class PreferencesActivity: ComponentActivity() {
   override fun onCreate( savedInstanceState: Bundle? ) {
     super.onCreate( savedInstanceState );
+
+    withContextAvailable<Unit> {
+      setContent {
+        PreferencesComposable( it.getApplicationContext() as Helm )
+      }
+    }
+
+/*
     addOnContextAvailableListener {
       object: OnContextAvailableListener {
         override fun onContextAvailable( context: Context ) {
@@ -51,6 +59,7 @@ class PreferencesActivity: ComponentActivity() {
         }
       }
     }
+*/
   }
 }
 
