@@ -42,7 +42,7 @@ import androidx.compose.ui.unit.dp
 class PreferencesActivity: ComponentActivity() {
   override fun onCreate( savedInstanceState: Bundle? ) {
     super.onCreate( savedInstanceState );
-
+/*
 		runBlocking {
   		launch {
         withContextAvailable<Unit> {
@@ -53,8 +53,7 @@ class PreferencesActivity: ComponentActivity() {
         }
   		}
 		}
-
-/*
+*/
     addOnContextAvailableListener {
       object: OnContextAvailableListener {
         override fun onContextAvailable( context: Context ) {
@@ -65,7 +64,6 @@ class PreferencesActivity: ComponentActivity() {
         }
       }
     }
-*/
   }
 }
 
