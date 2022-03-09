@@ -47,3 +47,8 @@ No premature optimization (tm): Could use steps -> count,steps to skip over unbo
 Arrays/List associated with sectors are of variable length and grown as-needed because we don't assume a known number of sectors during construction. Non-NULL members of the Array must always be constructed with a terminal (action/leaf) somewhere.
 
 */
+
+package com.github.manday.helm
+
+class Layout {
+}

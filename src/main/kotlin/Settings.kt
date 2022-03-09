@@ -15,6 +15,8 @@ Settings:
 
 --Appearance--
 Dialog Theme (Dark/Light etc.)
+Explicit Transition speed
+Implicit Transition speed
 Color Settings
  Trail
  Dominant Lines (Sector Cross)
