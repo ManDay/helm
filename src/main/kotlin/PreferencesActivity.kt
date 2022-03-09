@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import androidx.activity.ComponentActivity;
 import androidx.activity.compose.setContent;
+import androidx.activity.contextaware.*;
+import android.content.Context;
 
 import androidx.compose.runtime.Composable;
 import androidx.compose.foundation.background
