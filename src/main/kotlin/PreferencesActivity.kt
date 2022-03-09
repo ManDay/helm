@@ -2,6 +2,8 @@ package com.github.manday.helm;
 
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.Dispatchers
+import lotlinx.coroutines.CoroutineScope
 
 import android.os.Bundle;
 import android.util.Log;
@@ -40,8 +42,12 @@ import androidx.compose.ui.unit.dp
 
 
 class PreferencesActivity: ComponentActivity() {
+
+  
   override fun onCreate( savedInstanceState: Bundle? ) {
     super.onCreate( savedInstanceState );
+
+		val scope = CoroutineScope( Dispatchers.Default )
 /*
 		runBlocking {
   		launch {
@@ -57,9 +63,11 @@ class PreferencesActivity: ComponentActivity() {
     addOnContextAvailableListener {
       object: OnContextAvailableListener {
         override fun onContextAvailable( context: Context ) {
-          Log.w( "helm","Context is here" )
-          setContent {
-            PreferencesComposable( context.getApplicationContext() as Helm )
+          scope.launch {
+            Log.w( "helm","Context is here" )
+            setContent {
+              PreferencesComposable( context.getApplicationContext() as Helm )
+            }
           }
         }
       }
