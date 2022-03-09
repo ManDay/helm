@@ -34,13 +34,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 
-class PreferencesActivity : ComponentActivity() {
- override fun onCreate( savedInstanceState : Bundle? ) {
-  super.onCreate( savedInstanceState );
-  setContent {
-   PreferencesComposable( )
+class PreferencesActivity: ComponentActivity() {
+  override fun onCreate( savedInstanceState: Bundle? ) {
+    super.onCreate( savedInstanceState );
+    addContextAvailableListener {
+      object: OnContextAvailableListener {
+        fun onContextAvailable( context: Context ) {
+          setContent {
+            PreferencesComposable( context )
+          }
+        }
+      }
+    }
   }
- }
 }
 
 @Composable
@@ -62,7 +68,8 @@ private fun DrawerComposable( ){
 }
 
 @Composable
-private fun PreferencesComposable( ) {
+private fun PreferencesComposable( context: Context ) {
+  val context = context
   val myColors = MaterialTheme.colors
   val scaffoldState = rememberScaffoldState()
   val scope = rememberCoroutineScope()
@@ -90,9 +97,7 @@ private fun PreferencesComposable( ) {
     },
     content = {
       innerPadding -> LazyColumn(contentPadding = innerPadding) {
-        items(count = 100) {
-          Box( Modifier.fillMaxWidth().height(50.dp).background(myColors.surface) )
-        }
+
       }
     }
   )
