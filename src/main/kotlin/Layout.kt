@@ -51,4 +51,5 @@ Arrays/List associated with sectors are of variable length and grown as-needed b
 package com.github.manday.helm
 
 class Layout {
+  val name = "Test"
 }
