@@ -39,8 +39,8 @@ import androidx.compose.ui.unit.dp
 class PreferencesActivity: ComponentActivity() {
   override fun onCreate( savedInstanceState: Bundle? ) {
     super.onCreate( savedInstanceState );
-    addContextAvailableListener {
-      object: addOnContextAvailableListener {
+    addOnContextAvailableListener {
+      object: OnContextAvailableListener {
         fun onContextAvailable( context: Context ) {
           setContent {
             PreferencesComposable( context )
