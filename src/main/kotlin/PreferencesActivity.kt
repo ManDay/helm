@@ -99,7 +99,7 @@ private fun PreferencesComposable( helm: Helm ) {
     },
     content = {
       innerPadding -> LazyColumn(contentPadding = innerPadding) {
-				items( layoutRepository ) {
+				items( layoutRepository as List ) {
   				Text( it.id )
 				}
       }
