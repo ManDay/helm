@@ -3,7 +3,7 @@ package com.github.manday.helm;
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.Dispatchers
-import lotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.CoroutineScope
 
 import android.os.Bundle;
 import android.util.Log;
