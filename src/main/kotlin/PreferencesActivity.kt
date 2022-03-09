@@ -45,29 +45,11 @@ class PreferencesActivity: ComponentActivity() {
 
   
   override fun onCreate( savedInstanceState: Bundle? ) {
-/*
-		runBlocking {
-  		launch {
-        withContextAvailable<Unit> {
-          Log.w( "helm","Context is here" )
-          setContent {
-            PreferencesComposable( it.getApplicationContext() as Helm )
-          }
-        }
-  		}
-		}
-*/
-    addOnContextAvailableListener {
-      object: OnContextAvailableListener {
-        override fun onContextAvailable( context: Context ) {
-          Log.w( "helm","Context is here" )
-          setContent {
-            PreferencesComposable( context.getApplicationContext() as Helm )
-          }
-        }
-      }
-    }
     super.onCreate( savedInstanceState );
+    Log.w( "helm","Context is here" )
+    setContent {
+      PreferencesComposable( peekAvailableContext()!!.getApplicationContext() as Helm )
+    }
   }
 }
 
