@@ -92,7 +92,7 @@ private fun PreferencesComposable( helm: Helm ) {
     floatingActionButtonPosition = FabPosition.End,
     floatingActionButton = {
       ExtendedFloatingActionButton(
-        onClick = { },
+        onClick = { layoutRepository.add( Layout() ) },
         icon = { Icon( Icons.Filled.AddCircle,"Zip File" ) },
         text = { Text( "Load" ) }
       )
