@@ -43,6 +43,7 @@ class PreferencesActivity: ComponentActivity() {
     super.onCreate( savedInstanceState );
 
     withContextAvailable<Unit> {
+      Log.w( "helm","Context is here" )
       setContent {
         PreferencesComposable( it.getApplicationContext() as Helm )
       }
